@@ -8,7 +8,7 @@ subset_name = "en"
 split_name = "train"
 
 # Load the dataset from Hugging Face Hub
-dataset = datasets.load_dataset(dataset_name, subset_name, split=split_name)
+dataset = datasets.load_dataset(dataset_name, subset_name, split=split_name, num_proc=16)
 
 # Initialize the tokenizer
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
